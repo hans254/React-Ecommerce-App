@@ -40,7 +40,7 @@ accusantium corporis.`,
   },
 ];
 
-const Hero = () => {
+const Hero = ({handleOrderPopup}) => {
 
     var settings = {
         dots: false,
@@ -56,7 +56,7 @@ const Hero = () => {
     };
   return (
     <div className='relative overflow-hidden min-h-[550px]
-    sm: min-h-[650px] bg-gray-100 flex justify-center items-center
+    sm: min-h-[650px] flex justify-center items-center
     dark-bg-gray-950 dark:text-white duration-200'>
       {/* Backgraound Pattern */}
       <div className='h-[700px] 
@@ -87,7 +87,8 @@ const Hero = () => {
                         data-aos-delay="300"
                         data-aos-duration="500"
                         >
-                            <button className='bg-primary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full'>
+                            <button onClick={handleOrderPopup}
+                            className='bg-primary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full'>
                                 Order Now
                             </button>
                         </div>
@@ -100,7 +101,7 @@ const Hero = () => {
                         data-aos-duration="500"
                         className='relative z-10'>
                             <img src={data.img} alt="" 
-                            className='w-[300px] h-[300px] object-contain 
+                            className='w-[300px] h-[300px] object-contain rounded-full
                             sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 mx-auto'
                             />
                         </div>

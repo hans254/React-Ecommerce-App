@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 const TestimonialsData = [
   {
     id: 1,
-    name: 'John Doe',
+    name: 'Hansel Ndemange',
     image: 'https://randomuser.me/api/portraits/men/1.jpg',
     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
 Provident pariatur aspernatur id placeat inventore amet, nemo magnam est animi, 

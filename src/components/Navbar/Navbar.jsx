@@ -49,8 +49,8 @@ const DropdownLinks = [
         name: "Top Rated",
         link: "/#",
     }
-]
-const Navbar = () => {
+];
+const Navbar = ({handleOrderPopup}) => {
   return (
     <div className="shadow-md bg-white dark: bg-gray-500 dark:text-white 
     duration-200 relative z-40">
@@ -78,7 +78,7 @@ const Navbar = () => {
                         className="w-[200px] sm:w-[200px] 
                         group-hover:w-[300px] transition-all 
                         duration-300 rounded-full border
-                        border-gray-300 px-2 py-1
+                         px-2 py-1
                         focus:outline-none focus:border-1
                         focus:border-primary
                         dark: border-gray-500
@@ -89,7 +89,7 @@ const Navbar = () => {
             </div>
             {/* Order Button */}
             <button
-            onClick={() => alert("Ordering not available yet")}
+            onClick={() => handleOrderPopup()}
             className="bg-primary transition-all duration-200 text-white
             py-1 px-4 rounded-full flex items-center gap-3 group"
             >
@@ -99,26 +99,26 @@ const Navbar = () => {
                 <IoCart className='text-xl text-white drop-shadow-sm cursor-pointer'/>
             </button>
             {/* DarkMode Switch */}
-            <div>
+            <div className="ml-4 w-8 h-8">
                 <DarkMode />
             </div>
         </div>
       </div>
       {/* Lower Navbar */}
-      <div className='flex justify-center'>
+      <div data-aos="zoom-in" className='flex justify-center'>
         <ul className='sm:flex hidden items-center gap-4'>
             {
                 Menu.map((data) => (
                     <li key={data.id}>
                         <a href={data.link}
-                        className='inline-block px-4 hover:text-primary duration-200'
+                        className='inline-block px-4 hover:text-primary duration-200 dark:text-black font-bold'
                         >{data.name}</a>
                     </li>
                 ))
             }
             {/* Simple Dropdown and Links */}
             <li className='relative group cursor-pointer'>
-                <a href="#" className='flex items-center gap-[2px] py-2'>
+                <a href="#" className='flex items-center gap-[2px] py-2 font-bold text-black'>
                     Trending
                     <span>
                         <FaCaretDown className='transition-all duration-200 group-hover: rotate--180' />

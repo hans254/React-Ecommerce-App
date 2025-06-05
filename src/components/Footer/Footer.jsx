@@ -4,7 +4,7 @@ import FooterImage from '../../assets/footer.jpg';
 import {
     FaFacebook,
     FaInstagram,
-    FaLinkedIn,
+    FaLinkedinIn,
     FaLocationArrow,
     FaMobileAlt
 } from 'react-icons/fa';
@@ -39,7 +39,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <div style={Footerimg} className='text-white mb-20'>
+    <div style={Footerimg} className='text-white'>
       <div className="container">
         <div 
         data-aos="zoom-in"
@@ -110,23 +110,28 @@ const Footer = () => {
 
             {/* Social Links */}
             <div>
-                <div className="flex items-center gap-3 mt-6">
+                <div className="flex items-center gap-5 mt-6">
                     <a href="">
-                        <FaInstagram className='text-3xl' />
+                        <FaInstagram className='text-3xl hover:text-primary
+                        hover:translate-x-1 duration-300 hover:font-bold' />
                     </a>
                     <a href="">
-                        <FaFacebook className='text-3xl' />
+                        <FaFacebook className='text-3xl hover:text-primary
+                        hover:translate-x-1 duration-300 hover:font-bold' />
                     </a>
                     <a href="">
-                        <FaLinkedIn className='text-3xl' />
+                        <FaLinkedinIn className='text-3xl hover:text-primary
+                        hover:translate-x-1 duration-300 hover:font-bold' />
                     </a>
                 </div>
-                <div className='mt-6'>
-                    <div className='flex items-center gap-3'>
+                <div className='mt-6 cursor-pointer'>
+                    <div className='flex items-center gap-3 font-bold hover:text-primary
+                    hover:translate-x-1 duration-300'>
                         <FaLocationArrow />
                         <p>Nairobi, Kenya</p>
                     </div>
-                    <div className='flex items-center gap-3'>
+                    <div className='flex items-center gap-3 font-bold hover:text-primary
+                    hover:translate-x-1 duration-300'>
                         <FaMobileAlt />
                         <p>+254705 454 027</p>
                     </div>
