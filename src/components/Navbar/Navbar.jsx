@@ -2,8 +2,54 @@ import React from 'react';
 import Logo from "../../assets/Logo.png";
 import { FaSearch } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
+import { FaCaretDown } from 'react-icons/fa';
 import DarkMode from './DarkMode';
 
+const Menu = [
+    {
+        id: 1,
+        name: "Home",
+        link: "/",
+    },
+    {
+        id: 2,
+        name: "Top Rated",
+        link: "/#services",
+    },
+    {
+        id: 3,
+        name: "Kids Wear",
+        link: "/#",
+    },
+    {
+        id: 4,
+        name: "Mens Wear",
+        link: "/#",
+    },
+    {
+        id: 5,
+        name: "Electronics",
+        link: "/#",
+    }
+]
+
+const DropdownLinks = [
+    {
+        id: 1,
+        name: "Trendind Products",
+        link: "/#",
+    },
+    {
+        id: 2,
+        name: "Best Selling",
+        link: "/#",
+    },
+    {
+        id: 3,
+        name: "Top Rated",
+        link: "/#",
+    }
+]
 const Navbar = () => {
   return (
     <div className="shadow-md bg-white dark: bg-gray-500 dark:text-white 
@@ -33,8 +79,10 @@ const Navbar = () => {
                         group-hover:w-[300px] transition-all 
                         duration-300 rounded-full border
                         border-gray-300 px-2 py-1
-                        focus:outline-none focus:border 
-                        focus:border-primary" 
+                        focus:outline-none focus:border-1
+                        focus:border-primary
+                        dark: border-gray-500
+                        dark: bg-gray-800" 
                     />
                     <FaSearch className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3" />
                 </div>
@@ -42,8 +90,7 @@ const Navbar = () => {
             {/* Order Button */}
             <button
             onClick={() => alert("Ordering not available yet")}
-            className="bg-gradient-to-r from-primary
-            to-secondary transition-all duration-200 text-white
+            className="bg-primary transition-all duration-200 text-white
             py-1 px-4 rounded-full flex items-center gap-3 group"
             >
                 <span
@@ -58,6 +105,42 @@ const Navbar = () => {
         </div>
       </div>
       {/* Lower Navbar */}
+      <div className='flex justify-center'>
+        <ul className='sm:flex hidden items-center gap-4'>
+            {
+                Menu.map((data) => (
+                    <li key={data.id}>
+                        <a href={data.link}
+                        className='inline-block px-4 hover:text-primary duration-200'
+                        >{data.name}</a>
+                    </li>
+                ))
+            }
+            {/* Simple Dropdown and Links */}
+            <li className='relative group cursor-pointer'>
+                <a href="#" className='flex items-center gap-[2px] py-2'>
+                    Trending
+                    <span>
+                        <FaCaretDown className='transition-all duration-200 group-hover: rotate--180' />
+                    </span>
+                </a>
+                <div className='absolute z-[9999] hidden group-hover:block w-[200px] bg-white rounded-md p-2 text-black shadow-md'>
+                    <ul>
+                        {DropdownLinks.map((data) => (
+                            <li key={data.id}>
+                                <a href={data.id}
+                                className='inline-block 
+                                w-full rounded-md 
+                                p-2 hover:bg-primary/20'
+                                >{data.name}</a>
+                            </li>
+                        )
+                    )}
+                    </ul>
+                </div>
+            </li>
+        </ul>
+      </div>
     </div>
   )
 }
