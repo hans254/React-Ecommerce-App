@@ -88,6 +88,13 @@ const Products = () => {
                     ))
                 }
             </div>
+            {/* View all Button */}
+            <div className="flex justify-center">
+                <button
+                className=' text-center mt-10 cursor-pointer bg-primary text-white py-1 
+                px-5 rounded-md'
+                >View All Button</button>
+            </div>
         </div>
       </div>
     </div>
