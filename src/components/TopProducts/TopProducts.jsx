@@ -1,7 +1,7 @@
 import React from 'react';
-import Img1 from '../../assets/adult-woman.jpg';
-import Img2 from '../../assets/friends.jpg';
-import Img3 from '../../assets/welldressed.jpg';
+import Img1 from '../../assets/Polo.png';
+import Img2 from '../../assets/Stefanno.png';
+import Img3 from '../../assets/Luku.png';
 import { FaStar } from 'react-icons/fa6';
 
 const ProductsData = [
@@ -59,7 +59,7 @@ const TopProducts = ({handleOrderPopup}) => {
                     relative shadow-xl duration-300 group max-w-[300px]'
                     >
                         {/* Image Section */}
-                        <div className='h-[100px]'>
+                        <div className='h-[180px]'>
                             <img className='rounded-md max-w-[250px] block mx-auto
                             transform -translate-y-20 group-hover:scale-105 duration-300
                             drop-shadow-md' 

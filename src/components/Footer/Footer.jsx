@@ -3,7 +3,7 @@ import Logo from '../../assets/Logo.png';
 import FooterImage from '../../assets/footer.jpg';
 import {
     FaFacebook,
-    FaInstagram,
+    FaGithub,
     FaLinkedinIn,
     FaLocationArrow,
     FaMobileAlt
@@ -111,15 +111,15 @@ const Footer = () => {
             {/* Social Links */}
             <div>
                 <div className="flex items-center gap-5 mt-6">
-                    <a href="">
-                        <FaInstagram className='text-3xl hover:text-primary
+                    <a href="https://github.com/hans254" target='_blank'>
+                        <FaGithub className='text-3xl hover:text-primary
                         hover:translate-x-1 duration-300 hover:font-bold' />
                     </a>
-                    <a href="">
+                    <a href="https://www.facebook.com/share/1ASNjxW4Ko/" target='_blank'>
                         <FaFacebook className='text-3xl hover:text-primary
                         hover:translate-x-1 duration-300 hover:font-bold' />
                     </a>
-                    <a href="">
+                    <a target='_blank' href="https://www.linkedin.com/in/hansel-ndemange-360434230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                         <FaLinkedinIn className='text-3xl hover:text-primary
                         hover:translate-x-1 duration-300 hover:font-bold' />
                     </a>
